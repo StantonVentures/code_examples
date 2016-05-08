@@ -1,0 +1,50 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="body-content">
+
+      <h1>{{ doc_info.name }}</h1>
+
+		<div>
+
+		  <!-- Nav tabs -->
+		  <span role="navigation">
+			  <ul class="nav nav-tabs" role="tablist">
+			    <li role="presentation" class="active"><a href="#overview" aria-controls="overview" role="tab" data-toggle="tab"><i class="fa fa-square"></i> Overview</a></li>
+			    <li role="presentation"><a href="#admin-how-to" aria-controls="admin-how-to" role="tab" data-toggle="tab"><i class="fa fa-list"></i> Admin How To</a></li>
+			    <li role="presentation"><a href="#user-how-to" aria-controls="user-how-to" role="tab" data-toggle="tab"><i class="fa fa-list"></i> User How To</a></li>
+			    <li role="presentation"><a href="#faq" aria-controls="faq" role="tab" data-toggle="tab"><i class="fa fa-question"></i> FAQ</a></li>
+			    <li role="presentation"><a href="#troubleshooting" aria-controls="troubleshooting" role="tab" data-toggle="tab"><i class="fa fa-exclamation-triangle"></i>  Troubleshooting</a></li>
+			  </ul>
+		  </span>
+
+		  <!-- Tab panes -->
+		  <div class="tab-content">
+		    <div role="tabpanel" class="tab-pane active" id="overview">
+		    	<h2>Overview</h2>
+		    	{{ doc_info.doc_overview|safe }}
+		    </div>
+		    <div role="tabpanel" class="tab-pane" id="admin-how-to">
+		    	<h2>Admin How To</h2>
+		    	{{ doc_info.doc_adminhowto|safe }}
+		    </div>
+		    <div role="tabpanel" class="tab-pane" id="user-how-to">
+		    	<h2>User How To</h2>
+		    	{{ doc_info.doc_userhowto|safe }}
+		    </div>
+		    <div role="tabpanel" class="tab-pane" id="faq">
+		    	<h2>FAQ</h2>
+		    	{{ doc_info.doc_faq|safe }}
+		    </div>
+		    <div role="tabpanel" class="tab-pane" id="troubleshooting">
+		    	<h2>Troubleshooting</h2>
+		    	{{ doc_info.doc_troubleshooting|safe }}
+		    </div>
+		  </div>
+
+		</div>
+
+</div>
+{% endblock %}
+

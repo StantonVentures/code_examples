@@ -1,0 +1,32 @@
+
+{% extends "layout.html" %}
+{% block content %}
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+
+  <h1>[CLIENT_NAME] Knowledge Base</h1>
+
+  <p>Documentation for Administrators, technical support staff, and business users.</p>
+</div><!-- /.jumbotron -->
+
+<div class="body-content">
+  <div class="row">
+    <div class="col-lg-4">
+      <h2><i class="fa fa-play"></i> Getting Started</h2>
+      <p>A gentle on-ramp to learning the power of [CLIENT_NAME] for your business.</p>
+      <p><a class="btn btn-default" href="{{ url_for('public.getting_started') }}">Getting Started Guide &raquo;</a></p>
+    </div>
+    <div class="col-lg-4">
+      <h2><i class="fa fa-question"></i> FAQ</h2>
+      <p>The most common questions about [CLIENT_NAME].</p>
+      <p><a href="{{ url_for('public.faq') }}" class="btn btn-default" href="#">Frequently Asked Questions &raquo;</a></p>
+   </div>
+    <div class="col-lg-4">
+      <h2><i class="fa fa-list"></i> Glossary</h2>
+      <p>The terms, abbreviations, and jargon of [CLIENT_NAME] listed and explained.</p>
+      <p><a href="{{ url_for('public.glossary') }}" class="btn btn-default" href="#">Glossary &raquo;</a></p>
+    </div>
+  </div><!-- /.row -->
+</div>
+{% endblock %}
+

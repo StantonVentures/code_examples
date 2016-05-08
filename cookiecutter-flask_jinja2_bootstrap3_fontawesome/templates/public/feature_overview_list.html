@@ -1,0 +1,21 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="body-content">
+      <h1>Feature Overviews</h1>
+      <p></p>
+
+      <table class="table table-hover">
+		{% for feature in feature_list %}
+		    <tr>
+		    	<TD><A HREF="/feature_doc/{{ feature.slug }}">{{ feature.name }}</a></td>
+		    </tr>
+		{% else %}
+		    <tr><td colspan=3>No features have documenttion here so far.</td></tr>
+		{% endfor %}
+      </table>
+
+</div>
+{% endblock %}
+
